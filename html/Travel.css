@@ -1,0 +1,391 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width:100%;
+    height:100vh;
+    background-color:teal;
+    background-image:url(../Asset/Img/Moutain.png),url(../Asset/Img/Mountain1.png),url(../Asset/Img/person.jpg);
+    background-repeat:no-repeat;
+    background-size:60%,60%,90% 900vh;
+    background-position: left,right,0%;
+    transition: background-position 0.5s,background-size 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header:hover{
+    background-position: -100%,120%,100%;
+    background-size: 80%,60%,100%,100vh;
+}
+#pagename{
+    font-size: 10vw;
+    letter-spacing: 3vw;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    transform: scale(0) rotateX(360deg) rotateY(90deg);
+    transition: transform 1s;
+    transition-delay: 0.2s;
+}
+#header:hover #pagename{
+    transform: scale(1) rotateX(0deg) rotateY(0deg);
+}
+#navbar{
+    width: 100%;
+    height: 75px;
+    background-color: #fb8500;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px black;
+    z-index: 2;
+}
+#logo{
+    width: 150px;
+    position: relative;
+    bottom: 40px;
+    filter: drop-shadow(2px 2px 2px black);
+}
+#mainlist{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #023047;
+    position: relative;
+    bottom: 130px;
+    left: 30px;
+}
+.li{
+    font-size: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: transform 0.5s, text-decoration 0.5s;
+}
+a{
+    text-decoration:none;
+    color:#023047;
+}
+a:hover{
+    color: white;
+}
+.li:hover{
+    transform: scale(1.2);
+    text-decoration: underline 2px white;
+}
+#home,#places,#info{
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+}
+#home{
+    background-color: #023047;
+}
+#places{
+    background-color: #219ebc;
+}
+#info{
+    background-color: #8ecae6;
+}
+#imagecont{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 60px;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#a{
+    font-size: 40px;
+}
+.imagesinHome{
+    width: 150px;
+    height: 200px;
+    position: relative;
+    right: 50px;
+    margin-left: -60px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 5px black;
+    transform: rotateY(25deg) skewY(-20deg);
+    transition: transform 0.5s,box-shadow 0.5s;
+}
+.imagesinHome:hover{
+    transform: rotateY(0deg) skewY(0deg) translate(0px,-180px) scale(1.5,1.2);
+    box-shadow: 2px 2px 5px black;
+}
+#guide{
+    width: 300px;
+    height: 250px;
+    background-color: rgba(210,210,210,0.564);
+    position: absolute;
+    left: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+#guideHeading{
+    font-size: 30px;
+    position: absolute;
+    top: 4px ;
+    left: 25px;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 2px black;
+    color: #fb8500;
+}
+#guidepara{
+    width: 250px;
+    padding: 10px;
+    position: absolute;
+    bottom: 3px;
+    padding-left: 25px;
+    text-align: justify;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-indent: 40px;
+    color: white;
+}
+#homepageInfo{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fb8500; */
+    position: relative;
+    top: 120px;
+    border-top: 4px solid gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0px;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+.travelContainer{
+    width: 200px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+.containerImage{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 250px;
+    transition: filter 0.5s;
+    border-radius: 10px;
+}
+.travelContainer:hover .containerImage{
+    filter: blur(10px);
+}
+.travelText{
+    position:relative;
+   top: -100px;
+    left: 10px;
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: 5px;
+    color:transparent;
+    transition: color 0.5s;
+}
+.travelContainer:hover .travelText{
+    color: white;
+}
+#walk{
+    background-image: url(../Asset/Img/walk.jpg);
+}
+#Train{
+    background-image: url(../Asset/Img/train.jpg);
+}
+#bus{
+    background-image: url(../Asset/Img/bus.jpg);
+}
+#bike{
+    background-image: url(../Asset/Img/bike.jpg);
+}
+#car{
+    background-image: url(../Asset/Img/car.jpg);
+}
+#cycle{
+    background-image: url(../Asset/Img/cycle.jpg);
+}
+#flight{
+    background-image: url(../Asset/Img/flight.jpg);
+}
+#horse{
+    background-image: url(../Asset/img/horse.jpg);
+}
+h1{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+#places{
+    height: 100vh;
+    width: 100%;
+    background-color: #587498;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+.placecontainer{
+    height: 250px;
+    width: 250px;
+    background-size:300px 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    position: relative;
+    overflow: hidden;
+    
+}
+.placecontainer:hover  {
+    transform: scale(1.2);
+}
+#Hydrabad{
+    background-image: url(../Asset/Img/charminar.jpg);
+}
+#Karnataka{
+    background-image: url(../Asset/Img/Mysuru\ karnataka.webp);
+}
+#maharastra{
+    background-image: url(../Asset/Img/gateway.jpg);
+}
+#amurthsar{
+    background-image: url(../Asset/Img/golden\ temple.jpg);
+}
+#delthi{
+    background-image: url(../Asset/Img/red\ fort.jpg);
+}
+#kolkata{
+    background-image: url(../Asset/Img/Victoria\ Memorial.jpg);
+}
+#agra{
+    background-image: url(../Asset/Img/tajmahal.jpg);
+}
+
+.placename{
+    font-size: 40px;
+    display: flex;
+    position: relative;
+    top: 150px;
+    justify-content: center;
+    text-align: center;
+    left: 10px;
+    color: white;
+  
+}
+#info{
+    height: 100vh;
+    width: 100%;
+    background-color: #E86850;
+}
+
+#main{
+    height: 500px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: rgba(59, 231, 231, 0.682);
+    position: relative;
+    top: 100px;
+    left: 650px;
+}
+#ab{
+    position: relative;
+    font-size: 40px;
+    top: 45px;
+    left: 20px;
+    font-weight: bolder;
+}
+#in1{
+    position: relative;
+    top: 80px;
+    left: 100px;
+    width: 420px;
+    height: 35px;
+    outline: none;
+    border: none;
+
+}
+#in{
+    position: relative;
+    top: 120px;
+    left: 100px;
+    width: 420px;
+    height: 35px;
+    outline: none;
+    border: none;
+}
+#pl{
+    position: relative;
+    top: 160px;
+    left: 100px;
+    width: 420px;
+    height: 90px;
+    outline: none;
+    border: none;
+}
+#p2{
+    position: relative;
+    top: 260px;
+     right: 170px;
+    width: 150px;
+    height: 35px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+#details{
+    height: 450px;
+    width: 450px;
+    position: relative;
+    left: 250px;
+    bottom: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    column-gap: 22px;
+}
+.sub{
+   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(221, 231, 225);
+   
+}
+.sub:hover{
+    transform: scale(1.5);
+}
+#location img ,#phone img ,#fax img ,#email img {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+#email img {
+    left: 45px;
+}
+h4{
+    position: relative;
+    top: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+h5{
+    position: relative;
+    top: 35px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
